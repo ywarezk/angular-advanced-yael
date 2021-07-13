@@ -1,5 +1,13 @@
 # Significant changes in Angular
 
+## Angular V12
+
+```
+> npx ng update
+```
+
+
+
 ## Lesson Plan
 
 - Ivy renderer
