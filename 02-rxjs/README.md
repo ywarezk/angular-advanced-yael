@@ -17,6 +17,11 @@
 ```
 
 
+## Improve how we deal with async code
+
+
+
+
 ## EX.
 
 - Create a node.js typescript playground like we did in the lesson
