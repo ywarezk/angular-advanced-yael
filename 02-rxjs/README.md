@@ -1,5 +1,22 @@
 # RXJS and async code in Javascript
 
+## Create the playground
+
+- start a project with only rxjs installed - not an angular project
+- cleaning the noise
+- focusing only on RXJS
+
+```bash
+> mkdir 02-rxjs
+> cd 02-rxjs
+> npm init --yes
+> npm install typescript -D
+> npm install rxjs
+> npx tsc --init # created a tsconfig.json
+> npx tsc -w
+```
+
+
 ## EX.
 
 - Create a node.js typescript playground like we did in the lesson
