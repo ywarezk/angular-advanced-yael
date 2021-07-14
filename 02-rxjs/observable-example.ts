@@ -3,7 +3,7 @@
 /**
 
 
----o----o----o---------->
+---o----o----o----X---o---->
 
 setInterval(() => {
 	console.log('this will be called every second')
@@ -20,12 +20,32 @@ const intervalObservable = new Observable((observer) => {
 		// resolve can only be called once
 		// next can be called infinite amount of times
 		observer.next('hello world');
+		try {
+			//
+			const error =  new Error();
+			// 
+		} catch(err) {
+			// log kibhana
+			observer.error(new Error());
+		}
 		
-		// observer.error(new Error('something happened'));
+		/*
+		
+		*/
 	}, 1000);
 	
 });
 
-intervalObservable.subscribe((msg) => {
-	console.log(msg);
-})
+
+// error
+
+intervalObservable.subscribe(
+	{
+		next: (msg) => {
+			console.log()
+		},
+		error: (err) => {
+			console.log(err);
+		}
+	}
+)

@@ -2,7 +2,7 @@
 /**
 
 
----o----o----o---------->
+---o----o----o----X---o---->
 
 setInterval(() => {
     console.log('this will be called every second')
@@ -17,10 +17,27 @@ var intervalObservable = new rxjs_1.Observable(function (observer) {
         // resolve can only be called once
         // next can be called infinite amount of times
         observer.next('hello world');
-        // observer.error(new Error('something happened'));
+        try {
+            //
+            var error = new Error();
+            // 
+        }
+        catch (err) {
+            // log kibhana
+            observer.error(new Error());
+        }
+        /*
+        
+        */
     }, 1000);
 });
-intervalObservable.subscribe(function (msg) {
-    console.log(msg);
+// error
+intervalObservable.subscribe({
+    next: function (msg) {
+        console.log();
+    },
+    error: function (err) {
+        console.log(err);
+    }
 });
 //# sourceMappingURL=observable-example.js.map
