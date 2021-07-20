@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductService } from './product.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,16 @@ import { Component } from '@angular/core';
       toggle stam condition
     </button>
     <app-child *ngIf="stamCondition"></app-child>
+
+    <ul>
+      <li *ngFor="let product of productsService.products$ | async">
+        {{ product}}
+      </li>
+    </ul>
   `
 })
 export class AppComponent {
   stamCondition = true;
+
+  constructor(public productsService: ProductService) {}
 }
