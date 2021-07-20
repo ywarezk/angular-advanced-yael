@@ -14,7 +14,22 @@ setTimeout
 2. P -----> Rejected
 
  */
+ 
+ 
+ /**
+  * 
+  
+  
+  class Promise {
+	  constructor(cb) {
+		  cb()
+	  }
+  }
+  
+  */
+ 
  const timerPromise = new Promise((resolve, reject) => {
+	console.log('promise async callback');
 	 
 	setTimeout(() => {
 		resolve('hello world');
@@ -26,31 +41,38 @@ setTimeout
 	 
  })
  
-timerPromise.then((msg) => {
-	console.log(msg);
-})
+ 
+function sayHello(arg: number) {
+	
+}
 
-timerPromise.then((msg) => {
-	console.log(msg);
-})
+sayHello( Math.random() )
+ 
+// timerPromise.then((msg) => {
+// 	console.log(msg);
+// })
 
-function sendRequestToServer() {
-	if (true) {
+// timerPromise.then((msg) => {
+// 	console.log(msg);
+// })
+
+// function sendRequestToServer() {
+// 	if (true) {
 		
-	}
-	console.log('hello world');
+// 	}
+// 	console.log('hello world');
 	
-	try {
-		// ... this code can fail
-	} catch(err) {
-		// send the log to kibhana
-		throw err;
-	}
+// 	try {
+// 		// ... this code can fail
+// 	} catch(err) {
+// 		// send the log to kibhana
+// 		throw err;
+// 	}
 	
-}
+// }
 
-try {
-	sendRequestToServer()
-} catch(err) {
+// try {
+// 	sendRequestToServer()
+// } catch(err) {
 	
-}
+// }

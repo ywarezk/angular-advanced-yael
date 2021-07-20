@@ -31,3 +31,12 @@
   -  Create a `tsconfig.json` file using the command: `npx tsc --init`
   - set `sourceMap` to `true` in the `tsconfig`
   - constantly compile all the files
+  
+  ## EX. operators
+  
+- Creating operators: from, interval, of 
+- Join operators: combineLatest, merge, 
+- Transforming operators: map, mergeMap, 
+- Filtering observable: debounceTime, distinctUntilChanged, filter, first, last, take
+- Error handling: catchError
+- utility: tap 

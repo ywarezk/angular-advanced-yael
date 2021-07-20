@@ -7,11 +7,13 @@ we usually pass a callback
 and that callback is called sometime in the future
 
  */
-// ---------o----------->
+// ---------o--|--------->
+// ---------X----------->
 setTimeout(function () {
     console.log('hello world');
 }, 2000);
-// ---o----o----o------------->
+// ---o----o----o---X---------->
+//                  -----o----->
 setInterval(function () {
     console.log('this will be called every second');
 }, 1000);
