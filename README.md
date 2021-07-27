@@ -19,3 +19,7 @@ Angular advanced course given to Yael Software on July 2021
 1. https://johnbryce.zoom.us/rec/share/gsY-QKwPZGlEn_3J1rFp7e7NM9Mv0bcTywXeHPmZb2uDZ98McxVe_CVMWeYumSsj.6HmkM_QE1fl1Yeco
 
 2. https://johnbryce.zoom.us/rec/share/xRb_2nicju6DrxUgLl36ExESNcbP-6A5j6_a8I3fELxODGMVsgtqW2cRncLeuhO1.VhhogEBs_CBlCbKK
+
+## Youtube
+
+1. [rxjs](https://www.youtube.com/watch?v=rLPW1VowY1E)

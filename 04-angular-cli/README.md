@@ -2,6 +2,14 @@
 
 Going over some advanced features of angular cli
 
+We want best practices for very big projects
+
+## Start a new project with angular cli
+
+```bash
+> npx @angular/cli new my-big-project --create-application=false
+```
+
 ## Lesson Plan
 
 - workspace
