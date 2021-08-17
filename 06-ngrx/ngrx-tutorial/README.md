@@ -105,3 +105,19 @@ Action is the result of something async that is happening: server,timer, websock
 
 ![Redux flow](https://redux.js.org/assets/images/ReduxDataFlowDiagram-49fa8c3968371d9ef6f2a1486bd40a26.gif)
 
+
+## @ngrx/entity
+
+helping us arrange arrays in our store like nechama tasks
+
+## @ngrx/data
+
+solves a common problem with data managment.  
+
+data from server
+
+grab nechama tasks from server place it in the state - @ngrx/data
+
+## Proxy
+
+https://angular.io/guide/build#proxying-to-a-backend-server

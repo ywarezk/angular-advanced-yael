@@ -10,6 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { GrabTasksComponent } from './grab-tasks/grab-tasks.component';
 import { EffectsModule } from '@ngrx/effects';
 import { TodoEffect } from './state/todo/todo.effect';
+import { NechamaEffect } from './state/nechama/nechama.effect';
+import { nechamaReducer } from './state/nechama/nechama.reducer';
+import { AuthModule } from 'src/auth/auth.module';
+import { DefaultDataServiceConfig, EntityDataModule } from '@ngrx/data';
 
 @NgModule({
   declarations: [
@@ -22,14 +26,29 @@ import { TodoEffect } from './state/todo/todo.effect';
     HttpClientModule,
     StoreModule.forRoot({
       greeting: greetingReducer,
-      todo: todoReducer
+      todo: todoReducer,
+      nechama: nechamaReducer
     }),
     StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([
-      TodoEffect
-    ])
+      TodoEffect,
+      NechamaEffect
+    ]),
+    AuthModule,
+    EntityDataModule.forRoot({
+      entityMetadata: {
+        'Task': {}
+      }
+    })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: DefaultDataServiceConfig,
+      useValue: {
+        root: 'http://nztodo.herokuapp.com/api/'
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

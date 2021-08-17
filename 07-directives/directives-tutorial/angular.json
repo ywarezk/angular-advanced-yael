@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngrx-tutorial": {
+    "directives-tutorial": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngrx-tutorial",
+            "outputPath": "dist/directives-tutorial",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,24 +68,18 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ngrx-tutorial:build:production"
+              "browserTarget": "directives-tutorial:build:production"
             },
             "development": {
-              "browserTarget": "ngrx-tutorial:build:development"
-            },
-            "options": {
-              "proxyConfig": "./proxy.conf.json"
+              "browserTarget": "directives-tutorial:build:development"
             }
           },
-          "defaultConfiguration": "development",
-          "options": {
-            "proxyConfig": "./proxy.conf.json"
-          }
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngrx-tutorial:build"
+            "browserTarget": "directives-tutorial:build"
           }
         },
         "test": {
@@ -108,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "ngrx-tutorial"
+  "defaultProject": "directives-tutorial"
 }

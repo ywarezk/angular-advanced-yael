@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { AppState, messageSelector } from './state';
+import { AppState, fetchNechamaTasks, messageSelector } from './state';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -21,7 +21,7 @@ import { map } from 'rxjs/operators';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   // greetingMessage$: Observable<string> = this._store$.pipe(
   //   map((state: AppState) => state.greeting.message)
   // )
@@ -30,4 +30,8 @@ export class AppComponent {
 
 
   constructor(private _store$: Store<AppState>) {}
+
+  ngOnInit() {
+    this._store$.dispatch(fetchNechamaTasks());
+  }
 }
