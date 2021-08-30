@@ -22,11 +22,10 @@ import { AppComponent } from './app.component';
     EffectsModule.forRoot(),
     EntityDataModule.forRoot({
       entityMetadata: {
-        'Task': {}
+        'Task': {},
+        'City': {},
+        'Address': {}
       },
-      // pluralNames: {
-      //   'Task': 'Task'
-      // }
     })
   ],
   providers: [

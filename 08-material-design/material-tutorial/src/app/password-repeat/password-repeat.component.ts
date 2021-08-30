@@ -83,14 +83,9 @@ export class PasswordRepeatComponent implements ControlValueAccessor, OnInit {
   constructor(private _formBuilder: FormBuilder) {}
 
   ngOnInit() {
-
-    this.passwordRepeat.valueChanges.subscribe({
-      next: (group) => {
-        debugger;
-        this._changeCb(group);
-      },
-      error: () => {
-        debugger
+    this.passwordRepeat.valueChanges.subscribe((value) => {
+      if (this._changeCb) {
+        this._changeCb(value);
       }
     })
   }

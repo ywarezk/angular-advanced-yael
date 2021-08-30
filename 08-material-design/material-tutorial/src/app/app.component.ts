@@ -27,6 +27,8 @@ import { Component } from '@angular/core';
       </app-password-repeat>
 
       {{myPasswordRepeat | json}}
+
+      <input type="file" />
     </div>
 
   `,
