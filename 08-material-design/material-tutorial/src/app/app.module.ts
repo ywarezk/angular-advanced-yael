@@ -11,6 +11,10 @@ import { CheckboxExampleComponent } from './checkbox-example/checkbox-example.co
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PasswordRepeatComponent } from './password-repeat/password-repeat.component';
+import { PigletshvilyDirective } from './pigletshvily.directive';
+import { CheckWithServerDirective } from './check-with-server.directive';
+import { HttpClientModule } from '@angular/common/http';
+import { ViewChildExampleComponent } from './view-child-example/view-child-example.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,10 @@ import { PasswordRepeatComponent } from './password-repeat/password-repeat.compo
     InputExampleComponent,
     NgContentExampleComponent,
     CheckboxExampleComponent,
-    PasswordRepeatComponent
+    PasswordRepeatComponent,
+    PigletshvilyDirective,
+    CheckWithServerDirective,
+    ViewChildExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +34,8 @@ import { PasswordRepeatComponent } from './password-repeat/password-repeat.compo
     MatButtonModule,
     MatCheckboxModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

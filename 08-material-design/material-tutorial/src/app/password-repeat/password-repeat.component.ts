@@ -59,8 +59,6 @@ import { ControlValueAccessor, FormBuilder, NG_VALUE_ACCESSOR } from '@angular/f
     <div [formGroup]="passwordRepeat">
       <input type="password" name="password" formControlName="password" (blur)="touchCallback()" />
       <input type="password" name="repeat" formControlName="repeat" (blur)="touchCallback()" />
-
-      {{passwordRepeat.value | json}}
     </div>
   `,
   providers: [
@@ -95,6 +93,7 @@ export class PasswordRepeatComponent implements ControlValueAccessor, OnInit {
    <input type="creditCard" [(ngModel)]="myCreditCard" />
    myCreditCard = '1234-1224'
 
+  ngModel ---> PasswordRepeatComponent
 
    * @param obj
    */
@@ -102,11 +101,22 @@ export class PasswordRepeatComponent implements ControlValueAccessor, OnInit {
     this.passwordRepeat.setValue(obj || {password: '', repeat: ''});
   }
 
+  /**
 
+   ngModel <------- PasswordRepeatComponent
+
+
+   */
   registerOnChange(fn: any): void {
     this._changeCb = fn;
   }
 
+  /**
+
+   ngModel <-------- PasswordRepeatComponent
+
+
+   */
   registerOnTouched(fn: any): void {
     this.touchCallback = fn;
   }

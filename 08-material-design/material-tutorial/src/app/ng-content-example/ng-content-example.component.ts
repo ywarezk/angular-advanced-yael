@@ -1,5 +1,10 @@
 /**
  * ng-content
+
+ <app-ng-content-example>
+  <h1 #someText>hello world</h1>
+ </app-ng-content-example>
+
  */
 
 import { AfterContentChecked, AfterContentInit, Component, ContentChild, DoCheck, ElementRef, OnInit } from '@angular/core';
