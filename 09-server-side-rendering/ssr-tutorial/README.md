@@ -34,3 +34,22 @@ Poor SEO on SPA sites
 
 - when running angular component in the browser we see a screen
 - when running angular component in Node we get HTML.
+
+## Initial load with full HTML 
+
+```SPA
+<body>
+  <app-root></app-root>
+</body>
+```
+
+```SPA with SSR
+<body>
+  <app-root>
+    <div>
+      <h1>...</h1>
+      ...
+    </div>
+  </app-root>
+</body>
+```
