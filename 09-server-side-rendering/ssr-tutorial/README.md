@@ -53,3 +53,79 @@ Poor SEO on SPA sites
   </app-root>
 </body>
 ```
+
+## What is Server Side Rendering?
+
+the result of our app
+
+- Node.js server - index.html
+- Static files (like before SSR)
+
+The node.js responsibility is creating the entry point.
+
+
+browser                                   Node.js
+
+                Request
+------------------------------------------->
+
+                Full Html of our app
+<-------------------------------------------
+
+            User sees a screen
+            
+  Many requests to load other resources - 12 sec on 3g connection
+--------------------------------------------> Node.js
+
+
+## SSR link to docs
+
+https://angular.io/guide/universal
+
+
+## to add SSR to my angular app
+
+```
+> npx ng add @nguniversal/express-engine
+```
+
+## Modules
+
+Node.js
+AppServerModule  ---> AppModule
+
+Browser
+AppModule
+
+## Commands
+
+instead of
+
+```
+> npx ng serve
+```
+
+you use for development:
+
+```
+> npm run dev:ssr
+```
+
+## Prerender
+
+```
+> npm run build:ssr
+```
+
+## Prerender + client rendered
+
+```
+<html>
+  <body>
+    <h1>Yariv Katz</h1>
+    <div>
+      same html for the entire page
+    </div>
+  </body>
+</html>
+```

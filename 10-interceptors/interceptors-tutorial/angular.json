@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ssr-tutorial": {
+    "interceptors-tutorial": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ssr-tutorial/browser",
+            "outputPath": "dist/interceptors-tutorial",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ssr-tutorial:build:production"
+              "browserTarget": "interceptors-tutorial:build:production"
             },
             "development": {
-              "browserTarget": "ssr-tutorial:build:development"
+              "browserTarget": "interceptors-tutorial:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ssr-tutorial:build"
+            "browserTarget": "interceptors-tutorial:build"
           }
         },
         "test": {
@@ -98,67 +98,9 @@
             ],
             "scripts": []
           }
-        },
-        "server": {
-          "builder": "@angular-devkit/build-angular:server",
-          "options": {
-            "outputPath": "dist/ssr-tutorial/server",
-            "main": "server.ts",
-            "tsConfig": "tsconfig.server.json"
-          },
-          "configurations": {
-            "production": {
-              "outputHashing": "media",
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
-            },
-            "development": {
-              "optimization": false,
-              "sourceMap": true,
-              "extractLicenses": false
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "serve-ssr": {
-          "builder": "@nguniversal/builders:ssr-dev-server",
-          "configurations": {
-            "development": {
-              "browserTarget": "ssr-tutorial:build:development",
-              "serverTarget": "ssr-tutorial:server:development"
-            },
-            "production": {
-              "browserTarget": "ssr-tutorial:build:production",
-              "serverTarget": "ssr-tutorial:server:production"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "prerender": {
-          "builder": "@nguniversal/builders:prerender",
-          "options": {
-            "routes": [
-              "/about"
-            ]
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "ssr-tutorial:build:production",
-              "serverTarget": "ssr-tutorial:server:production"
-            },
-            "development": {
-              "browserTarget": "ssr-tutorial:build:development",
-              "serverTarget": "ssr-tutorial:server:development"
-            }
-          },
-          "defaultConfiguration": "production"
         }
       }
     }
   },
-  "defaultProject": "ssr-tutorial"
+  "defaultProject": "interceptors-tutorial"
 }

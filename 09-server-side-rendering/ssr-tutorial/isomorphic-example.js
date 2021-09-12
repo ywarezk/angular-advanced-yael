@@ -13,3 +13,20 @@ if (typeof location !== 'undefined') {
   console.log('there is no location');
 }
 
+// shim
+// polyfill
+
+// shim
+
+/*
+global.location = {
+  href: ''
+}
+*/
+
+/**
+
+<some-component-that-can-only-run-on-browser>
+
+ */
+
