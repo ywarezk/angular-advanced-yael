@@ -1,3 +1,19 @@
+/**
+
+// if (isPlatformBrowser) {
+  // document.getElementById('stam').classList.push('admin')
+// }
+
+this._renderer.addClass(myElem, 'admin')
+
+
+<div class="admin" id="stam" #someDiv>
+</div>
+
+
+ */
+
+
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
 
@@ -11,7 +27,8 @@ export class AppComponent implements OnInit {
 
   constructor(
     @Inject(DOCUMENT) private _document: Document,
-    @Inject(PLATFORM_ID) private _platformId: Object
+    @Inject(PLATFORM_ID) private _platformId: Object,
+    private _renderer: Renderer2
   ) {}
 
   ngOnInit() {
